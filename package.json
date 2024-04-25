@@ -8,12 +8,21 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "scripts": {
+    "dev": "vite",
+    "build": "cross-env DEPLOY=github vite build",
+    "preview": "vite preview",
+    "publish-pwa": "gh-pages -t -d dist"
+  },
+
   "dependencies": {
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.1.1",
     "vite": "^5.0.10",
     "vite-plugin-pwa": "^0.19.8"
   }

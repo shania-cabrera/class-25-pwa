@@ -6,6 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: process.env.DEPLOY === "github" ? '/class-25-pwa/' : './',
   plugins: [
     vue(),
     VitePWA({
